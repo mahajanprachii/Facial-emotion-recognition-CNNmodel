@@ -118,21 +118,6 @@ The model is implemented using a custom PyTorch neural network class named `FERN
 <img width="531" height="286" alt="Screenshot 2026-10-13 at 10 32 23 PM" src="https://github.com/user-attachments/assets/a345a1bd-b662-49fa-a3aa-3f02ab82b046" />
 
 
-## Model Training
-
-The model is trained using PyTorch for **30 epochs**.
-
-During each epoch, the training loop:
-
-- Loads batches of images and labels from `train_loader`.
-- Moves the data to the selected computation device.
-- Performs the forward pass through the CNN.
-- Calculates the loss using the actual labels.
-- Clears the previous gradients using `optimizer.zero_grad()`.
-- Computes gradients using `loss.backward()`.
-- Updates model parameters using `optimizer.step()`.
-- Calculates and prints the average training loss for the epoch.
-
 ### Training Configuration
 
 | Parameter | Value |
