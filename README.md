@@ -35,20 +35,6 @@ The dataset is loaded from `fer2013.csv` using Pandas. The CSV contains emotion 
 | 5 | Surprise |
 | 6 | Neutral |
 
-## Data Preprocessing
-
-The dataset is loaded using `pandas.read_csv()`. The pixel values stored as space-separated strings are converted into numerical values and reshaped into grayscale images.
-
-The preprocessing steps include:
-
-- Loading the CSV file into a Pandas DataFrame.
-- Removing rows with missing `emotion` or `pixels` values.
-- Converting pixel strings into numerical values.
-- Reshaping each image into a `1 × 48 × 48` tensor.
-- Converting image data to `torch.float32`.
-- Normalizing pixel values by dividing them by 255.
-- Converting emotion labels to `torch.long` for classification.
-
 ## Custom Dataset Class
 
 A custom `FERDataset` class is implemented by inheriting from PyTorch's `Dataset` class.
